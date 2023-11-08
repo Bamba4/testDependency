@@ -1,0 +1,37 @@
+<div>
+  <fa-icon [icon]="faCoffee"></fa-icon>
+  <p>0.12.x 15.x 5.x && 6.x supported</p>
+  <div>
+    <!--ng-select Using ng-option and for loop-->
+    <div>
+      <h1>Ng select</h1>
+      <ng-select [(ngModel)]="selectedCar">
+        <ng-option *ngFor="let car of cars" [value]="car.id">{{
+          car.name
+        }}</ng-option>
+      </ng-select>
+
+      <!--Using items input-->
+      <ng-select
+        [items]="cars"
+        bindLabel="name"
+        bindValue="id"
+        [(ngModel)]="selectedCar"
+      >
+      </ng-select>
+    </div>
+  </div>
+</div>
+<app-articles-list></app-articles-list>
+<app-header></app-header>
+<app-footer></app-footer>
+<!--<app-header trace="header"></app-header>
+<app-articles-list trace="articles-list"></app-articles-list>
+<app-footer trace="footer"></app-footer>-->
+<h1>
+  {{ title }}
+</h1>
+<!--<lib-ngx-image-zoom
+  [thumbImage]="myThumbnail"
+  [fullImage]="myFullresImage"
+></lib-ngx-image-zoom>-->
